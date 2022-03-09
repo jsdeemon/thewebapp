@@ -12,7 +12,7 @@ const [response, setResponse] = useState<IResponse>({city: '', country: '', stat
 
 
 const fetchIp = (ip: string) => {
-    fetch(`https://ip-api.com/json/${ip}`)
+    fetch(`http://ip-api.com/json/${ip}`)
     .then(response => response.json())
     .then(data => setResponse(data));
 console.log(response)
