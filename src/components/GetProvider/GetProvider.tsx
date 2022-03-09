@@ -11,11 +11,8 @@ const [response, setResponse] = useState<IResponse>({city: '', country: '', stat
 
 
 
- // getDataFromIp('31.148.147.172');
-// `IP: ${ip}\nСтрана: ${response.data.country_name}\nПровайдер: ${response.data.isp}\nСтатус: ${response.data.response_message}`
-
 const fetchIp = (ip: string) => {
-    fetch(`http://ip-api.com/json/${ip}`)
+    fetch(`https://ip-api.com/json/${ip}`)
     .then(response => response.json())
     .then(data => setResponse(data));
 console.log(response)
